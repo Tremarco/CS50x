@@ -1,0 +1,19 @@
+sort1 uses: bubble sort
+
+How do you know?: It performs comparatively slowly when sorting random or reversed files, but fast when sorting sorted numbers.
+Bubble sort is O(n*n) and Ω(n) the times seen in testing support this expectation.
+For example, sort1 took 8.383s to sort random50000.txtm but only .564 seconds to sort sorted50000.txt. The fact the best case is
+significantly faster confirms sort1 must be bubble sort as both other types used in this question have θ algoritihms and thus would
+not expect to see much change in time recorded between different types of data.
+
+sort2 uses: merge sort
+
+How do you know?: Sort2 sorts significanly faster than sort1 or sort3 when dealing with the larger sets of random and reversed numbers.
+The merge sort algorithm is θ(n log n) so we expect merge to perform the fastest,and the test times recorded look as expected.
+Also, the ./sort2 sorted50000.txt time is not significantly faster than sort2's performance against random or reversed50000.
+
+sort3 uses: selection sort
+
+How do you know?: Sort 3 performs similarly on all 3 kinds of data, with tests on random50000, sorted50000 and reversed50000 all returning
+times between 3.084 and 3.340. This is what we would expect to see from an algorithm of θ(n*n). Additionally, we see that sort3 performs
+faster than sort1 on random and reversed data, but slower on sorted data.
